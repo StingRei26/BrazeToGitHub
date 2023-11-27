@@ -1,0 +1,175 @@
+ {% comment %} 
+
+***********************************************************************************************
+** GitHub Repo: https://github.com/pelotoncycle/MarTech-Eng/tree/main-env/Braze/Content%20Blocks/MCB_YIR_CENTURY_CLUB.html
+***********************************************************************************************
+** Change History
+***********************************************************************************************
+** JIRA      Date        Author    Description
+** ----      --------    -------   ------------------------------------
+** MIT-7790  11/21/2023  Elisa    initial version
+***********************************************************************************************
+
+{% endcomment %}
+
+{% if response.trophy_case.is_century_club == true and response.trophy_case.is_millenium_club != true %}
+  {% assign display = true %}
+{% else %}
+  {% assign display = false %}
+{% endif %}
+
+    {% assign contactGEO = {{contactGEO}} %}
+    
+    {{# Headline #}}
+    {% case color %}
+      {{# Red #}}
+      {% when '#ff3956' %}
+      {% if contactGEO == "DE" %}
+          {% assign headlineImage = "" %}
+        {% else %}
+          {% assign headlineImage = "https://peloton-production-email-images.s3.amazonaws.com/Century+Club.gif" %}
+        {% endif %}
+        
+      {{# Blue #}}
+      {% when '#1408c9' %}
+        {% if contactGEO == "DE" %}
+          {% assign headlineImage = "" %}
+        {% else %}
+          {% assign headlineImage = "" %}
+        {% endif %}
+      
+      {{# Green #}}
+      {% when '#cdff38' %}
+        {% if contactGEO == "DE" %}
+          {% assign headlineImage = "" %}
+        {% else %}
+          {% assign headlineImage = "" %}
+        {% endif %}
+      
+      {{# Dark Red #}}
+      {% when '#a00010'%}
+        {% if contactGEO == "DE" %}
+          {% assign headlineImage = "" %}
+        {% else %}
+          {% assign headlineImage = "" %}
+        {% endif %}
+    {% endcase %}
+    
+    {{# Copy Localization #}}
+    {%if contactGEO == "DE" %}
+      {% assign centuryClubCopy = "DE COPY" %}
+    {%else %}
+      {% assign centuryClubCopy = "We See you! You put in the work and pushed through to become a member of the Century Club. It's a huge achievement and we hope you're as proud of yourself as we are." %}
+    {% endif %}
+    
+    
+{% if display == true %}
+<tr>
+    <td width="100%" valign="top" align="center" class="st-dynamic-3494-6">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+        <tr>
+          <td width="100%" bgcolor="#000000" valign="top" style="width: 100%;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="width: 100%;">
+              <tr>
+                <td width="100%" valign="top" align="left" class="sidepad16" style="padding-right: 40px; padding-left: 40px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="520" class="st-mso-full-width st-mobile-full-width" style="width: 520px;">
+                    <tr>
+                      <td align="center" valign="top" width="520">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                          <tr>
+                            <td width="100%" valign="top" align="center" style="padding: 0px; width: 100%;">
+                              <p height="25" width="50%" style="mso-hide:all; text-size-adjust:100%; width: 50%; height: 25px; max-height: 25px; margin: 0px">
+                                &nbsp;
+                              </p> <!--[if mso]>
+<p 
+  height="25"
+  style="margin:0px 130px 0px; height: 25px; max-height: 25px; mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; line-height: 25px; font-size: 25px; ">
+    &nbsp;
+</p>
+<![endif]-->
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top" align="center" class="st-dynamic-3494-6">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+        <tr>
+          <td width="100%" valign="top" style="width: 100%;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="st-mso-full-width st-mobile-full-width" style="width: 600px;">
+              <tr>
+                <td align="center" valign="top" width="600">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                      <td width="100%" valign="top" align="left" style="width: 100%;"><a href="https://www.onepeloton.com/?lid={{${cblid} | lid: 's670974u5nj4'}}" target="_blank" style="display: block;"><img border="0" valign="top" width="600" src="{{imageLogoUrl}}" alt="Image" class="st-hide-mobile st-resize" style="border: 0px; display: block; width: 600px; max-width: 100%;"> <!--[if !mso 12]><!-->
+                          <div class="show-img-mobile" style="display: none; width: 0px; overflow: hidden;"><img src="https://www.emailimagecdnrvf6.com/xbgnat0sfd/en_us/images/653c0af0a295c-1698433776.666.png" border="0" width="600" valign="top" alt="Image" class="st-resize" style="display: block; border: none; max-width: 100%; height: auto; width: 600px;"></div> <!--<![endif]-->
+                        </a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top" align="center" class="st-dynamic-3494-6">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+        <tr>
+          <td width="100%" bgcolor="#000000" valign="top" class="rowpad16-dark" style="width: 100%; padding-right: 40px; padding-left: 40px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="width: 100%;">
+              <tr>
+                <td width="100%" valign="top" align="left">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="520" class="st-mso-full-width st-mobile-full-width" style="width: 520px;">
+                    <tr>
+                      <td align="center" valign="top" width="520">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"></table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td width="100%" valign="top" align="left">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="520" class="st-mso-full-width st-mobile-full-width" style="width: 520px;">
+                    <tr>
+                      <td align="center" valign="top" width="520">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                          <tr>
+                            <td width="100%" valign="top" align="left" class="sidepad16 fs-14 lh-24" style="text-align: left; font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px; font-weight: 300; letter-spacing: 0.03em; line-height: 28px; padding-top: 16px; width: 100%;">
+                              <p style="margin: 0px; text-align: center;">{{centuryClubCopy}}</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" valign="top" align="center" style="padding: 0px; width: 100%;">
+                              <p height="16" width="100%" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 16px; max-height: 16px; margin: 0px; font-size: 16px; line-height: 16px">
+                                &nbsp;
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  {% else %}
+{% endif %}
